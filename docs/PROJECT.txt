@@ -1,62 +1,279 @@
-# denia.info - Project Vision & Specifications
+================================================================
+DENIA.INFO
+The #1 Local Platform for Denia, Spain
+================================================================
+Owner:        Ismael Boukhouit
+Domain:       denia.info
+Status:       In Development
+Started:      February 2026
+Version:      1.0 MVP
+================================================================
 
-## The Vision
-To be the absolute undisputed #1 platform for discovering and booking restaurants, bars, hotels, and events in Denia. Evolving from a simple directory into an indispensable local tool that connects tourists and locals with authentic Denia experiences, while giving businesses a modern, effective way to reach their customers without the high fees of international conglomerates.
 
-## Core Tech Stack
-- **Frontend/Framework:** Next.js (App Router)
-- **Styling:** Tailwind CSS (for rapid, modern, responsive UI)
-- **Backend/Database/Auth:** Supabase (PostgreSQL)
-- **AI Integration:** Claude AI (for content generation, translation assistance, and data categorization)
-- **Hosting:** Vercel (recommended for Next.js)
+================================================================
+EXECUTIVE SUMMARY
+================================================================
+denia.info is a hyperlocal digital platform connecting tourists 
+and residents of Denia, Spain with the best restaurants, bars, 
+hotels, events, and activities the city has to offer.
 
-## High-Level Database Structure (Supabase)
-1.  **Users**
-    - `id` (uuid, primary key)
-    - `role` (enum: superadmin, owner, tourist, local)
-    - `email`, `created_at`
-2.  **Venues**
-    - `id`, `owner_id` (fk Users)
-    - `name`, `type` (restaurant, bar, hotel, event_space)
-    - `description_es`, `description_en` (etc)
-    - `address`, `lat`, `lng`
-    - `status` (active, pending, claimed)
-    - `is_premium` (boolean)
-3.  **Menus/Items**
-    - `id`, `venue_id` (fk Venues)
-    - `name`, `price`, `description`
-4.  **Reviews**
-    - `id`, `venue_id`, `user_id`
-    - `rating`, `comment`, `created_at`
-5.  **Guides/Articles**
-    - `id`, `title`, `content`, `author`, `published_date`
+Unlike generic platforms such as TripAdvisor or TheFork, 
+denia.info is built from the ground up for one city, by someone 
+who lives there. Every listing is verified in person. Every menu 
+is real. Every translation is quality-checked.
 
-## Key Pages Structure
-- `/` - Home (Hero search, curated lists "Best Paella", recent reviews)
-- `/search` - Main directory with extensive filters (cuisine, price, open now, features)
-- `/venue/[slug]` - Detailed profile (Photos, Menu, Map, Reviews, WhatsApp Booking CTA)
-- `/guides` - Insider articles and lists
-- `/guides/[slug]` - Individual guide page
-- `/dashboard/user` - Saved places, upcoming bookings
-- `/dashboard/owner` - Edit venue details, update menu, view basic analytics
-- `/admin` - Superadmin control panel for Ismael
+The platform is powered by Claude AI (Anthropic) for intelligent 
+features including multilingual support, smart search, automated 
+menu descriptions, and a tourist chatbot — making denia.info the 
+most technologically advanced local platform on the Costa Blanca.
 
-## Monetization Plan
-We prioritize building trust and a critical mass of users before heavy monetization.
+Target market:
+- 500,000+ tourists who visit Denia annually
+- 45,000 local residents
+- 300+ restaurants, bars, and hotels in Denia
 
-**Phase 1: Free (Months 1-6)**
-- 100% free for everyone to build the network effect and outpace competitors. Focus entirely on user acquisition and SEO supremacy.
 
-**Phase 2: Freemium Model (Months 6-12)**
-- Basic Listing: Free (Name, address, 1 photo).
-- "Premium Profile": Small monthly fee (€15-€30/mo) for multiple photos, full menu upload, highlighted "Open Now" status, and direct WhatsApp link.
+================================================================
+PROBLEM WE SOLVE
+================================================================
+Tourists arriving in Denia face a fragmented experience:
 
-**Phase 3: Advanced Monetization (Year 1+)**
-- "Featured Placements": Sponsored top results in search (e.g., top result for "Best Tapas").
-- "Booking Commission": Only if a full booking engine is built (alternative to WhatsApp).
-- Direct advertising for local events/services on the homepage.
+- Google Maps shows basic info but no full menus
+- TripAdvisor has reviews but no real-time booking
+- TheFork covers big chains but ignores small local gems
+- Local websites are outdated, not mobile-friendly, not multilingual
+- No single platform covers restaurants + bars + hotels + events
 
-## Success Metrics (KPIs)
-- **Month 3:** 30 claimed restaurant profiles, 500 monthly unique visitors.
-- **Month 6:** 100 total listings, top 3 Google ranking for "restaurants in denia" (ES/EN), 2,000 monthly unique visitors.
-- **Year 1:** 50 Premium paying profiles, #1 local resource, established community channels.
+Restaurant owners face the same problem from the other side:
+- No affordable way to showcase their full menu online
+- No simple booking system for small businesses
+- No multilingual presence to reach European tourists
+- Dependent on expensive platforms that take high commissions
+
+denia.info solves both sides of this problem.
+
+
+================================================================
+SOLUTION
+================================================================
+A fast, mobile-first, AI-powered platform that gives tourists 
+everything they need to discover and book the best of Denia — 
+and gives restaurant owners a free, powerful tool to attract 
+more customers.
+
+Core pillars:
+1. COMPLETE INFORMATION  — Full menus, real photos, accurate hours
+2. EASY BOOKING          — Table reservations in 3 clicks
+3. MULTILINGUAL          — ES, EN, FR, DE, NL (AI-powered)
+4. LOCAL INTELLIGENCE    — AI chatbot trained on Denia data
+5. TRUSTED              — Every listing verified in person
+
+
+================================================================
+TECH STACK
+================================================================
+Frontend:     Next.js 14 (React) — fast, SEO optimized
+Styling:      Tailwind CSS — mobile-first, responsive
+Backend:      Node.js — API routes via Next.js
+Database:     Supabase (PostgreSQL) — free tier to start
+AI Engine:    Claude API by Anthropic
+Code Editor:  Google Antigravity + Gemini 3 Pro
+Hosting:      Vercel — automatic deploys from GitHub
+Domain:       denia.info (owned) ✅
+Email:        SendGrid — booking confirmations
+Maps:         Google Maps API — interactive Denia map
+Version Ctrl: GitHub — github.com/ismael-bou/denia-info
+
+
+================================================================
+AI FEATURES (Powered by Claude API)
+================================================================
+1. TOURIST CHATBOT
+   Natural language assistant on the homepage.
+   Tourists ask: "Where can I eat paella near the beach tonight?"
+   Claude answers based on real listings and availability.
+
+2. MENU AUTO-TRANSLATION
+   Upload a menu in Spanish — Claude translates it instantly
+   into EN, FR, DE, NL with natural, accurate language.
+
+3. MENU DESCRIPTION GENERATOR
+   Upload a photo of a dish — Claude writes a professional,
+   appetizing description automatically.
+
+4. REVIEW SUMMARIZER
+   Claude reads all reviews for a restaurant and generates
+   a short, honest summary for tourists at a glance.
+
+5. SEO CONTENT GENERATOR
+   Claude auto-generates optimized page descriptions for 
+   every listing in all 5 languages.
+
+6. DAILY SOCIAL MEDIA POSTS
+   Claude generates daily LinkedIn and Instagram content
+   featuring Denia restaurants and food culture.
+
+7. OWNER MORNING BRIEFING
+   Daily email to platform owner: new bookings, new reviews,
+   site stats, and action items for the day.
+
+
+================================================================
+DATABASE STRUCTURE
+================================================================
+restaurants
+  id, name, slug, address, area, lat, lng, 
+  phone, email, website, cuisine_type, price_range,
+  opening_hours, is_featured, is_verified, created_at
+
+menus
+  id, restaurant_id, category, item_name, 
+  description_es, description_en, description_fr, 
+  description_de, description_nl, price, photo_url
+
+bookings
+  id, restaurant_id, user_name, user_email, 
+  user_phone, date, time, guests, status, 
+  confirmation_code, created_at
+
+reviews
+  id, restaurant_id, user_name, rating, comment, 
+  language, source, created_at
+
+users
+  id, email, preferred_language, nationality, 
+  loyalty_points, created_at
+
+events
+  id, title, description, date, time, 
+  location, category, is_free, price, created_at
+
+
+================================================================
+PLATFORM PAGES
+================================================================
+/                    Homepage — search + categories + map + featured
+/restaurants         Full listing with filters
+/restaurants/[slug]  Detail page — menu + photos + booking + reviews
+/bars                Bar listing with filters
+/bars/[slug]         Bar detail page
+/hotels              Hotel listing + availability
+/events              Events calendar
+/denia-guide         Tourist guide — beaches, transport, tips
+/admin               Owner dashboard — manage all listings
+/restaurant/login    Restaurant owner login
+/restaurant/dashboard Owner manages their own listing
+
+
+================================================================
+DESIGN SYSTEM
+================================================================
+Primary Color:    Deep Blue    #1B4F8A
+Accent Color:     Sandy Gold   #D4A843
+Background:       White        #FFFFFF
+Text:             Dark Gray    #1A1A2E
+Success:          Green        #27AE60
+Font:             Inter (clean, modern, multilingual-friendly)
+Style:            Mediterranean — clean, airy, trustworthy
+Priority:         Mobile-first (tourists use phones on the go)
+Languages:        ES / EN / FR / DE / NL (toggle in navbar)
+
+
+================================================================
+MONETIZATION STRATEGY
+================================================================
+PHASE 1 — FREE (Months 1-6)
+  All listings free to build trust and reach critical mass.
+  Target: 30+ restaurants onboarded.
+
+PHASE 2 — FREEMIUM (Months 7-12)
+  Basic listing:    FREE forever
+  Featured listing: 29 EUR/month (appear at top of search)
+  Premium dashboard: 49 EUR/month (analytics + booking stats)
+  Booking commission: 1 EUR per confirmed booking
+
+PHASE 3 — EXPANSION REVENUE (Year 2)
+  Banner advertising for local businesses
+  Tourism agency partnerships
+  Sponsored event promotion
+  White-label solution for other Costa Blanca towns
+
+Revenue target:
+  Month 6:   500 EUR/month
+  Month 12:  2,000 EUR/month
+  Year 2:    10,000 EUR/month
+
+
+================================================================
+GO-TO-MARKET STRATEGY
+================================================================
+Step 1:  Launch MVP — clean, fast, professional website
+Step 2:  Visit 30 restaurants personally — offer free listing
+Step 3:  Promote in Denia Facebook groups (locals + expats)
+Step 4:  Partner with Denia tourism office for credibility
+Step 5:  Instagram & TikTok — Denia food and lifestyle content
+Step 6:  Reach out to Dutch and German expat communities
+Step 7:  Start charging after proving real value to owners
+
+Unique selling point to restaurant owners:
+"We list you for free, we translate your menu into 5 languages, 
+and we bring you European tourists. No commission for 6 months."
+
+
+================================================================
+COMPETITIVE ADVANTAGE
+================================================================
+                   denia.info  TheFork  TripAdvisor  Google Maps
+Full menus              ✅        ❌          ❌           ❌
+Table booking           ✅        ✅          ❌           ❌
+AI features             ✅        ❌          ❌           ❌
+5 languages             ✅        ❌          ❌           ❌
+Local verified          ✅        ❌          ❌           ❌
+Free for owners         ✅        ❌          ❌           ✅
+Events & activities     ✅        ❌          ❌           ❌
+
+
+================================================================
+COST STRUCTURE
+================================================================
+Domain (denia.info):      Owned ✅         0 EUR/month
+Hosting (Vercel):         Free tier        0 EUR/month
+Database (Supabase):      Free tier        0 EUR/month
+Claude API (Anthropic):   Pay as you go   ~15 EUR/month
+Google Maps API:          Free tier        0 EUR/month
+SendGrid Email:           Free tier        0 EUR/month
+----------------------------------------------------------
+TOTAL LAUNCH COST:                        ~15 EUR/month
+
+
+================================================================
+SUCCESS METRICS
+================================================================
+Month 1:   10 restaurants live — 100 monthly visitors
+Month 3:   30 restaurants live — 500 monthly visitors
+Month 6:   100 listings — 2,000 visitors — first revenue
+Month 12:  200+ listings — 10,000 visitors — profitable
+Year 2:    Full Costa Blanca — 50,000+ monthly visitors
+
+
+================================================================
+TEAM
+================================================================
+Founder & Builder:   Ismael Boukhouit
+AI Assistant:        Claude (Anthropic) — strategy + content + code
+Code Editor:         Google Antigravity + Gemini 3 Pro
+Vision:              Build the best hyperlocal platform in Spain
+
+
+================================================================
+CONTACT
+================================================================
+Platform:   denia.info
+GitHub:     github.com/ismael-bou/denia-info
+Owner:      Ismael Boukhouit
+
+================================================================
+END OF PROJECT DOCUMENT
+================================================================
+Built with passion for Denia. 🌊🍽️🚀
+================================================================
