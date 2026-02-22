@@ -1,70 +1,90 @@
-# denia.info - Master Roadmap Overview
-Target: Launch MVP before summer season (by mid-May).
+================================================================
+DENIA.INFO - PROJECT ROADMAP
+================================================================
+Owner: Ismael Boukhouit
+Domain: denia.info
+Last updated: February 2026
+================================================================
 
-## Month 1: Foundation & The MVP (Current)
-Goal: A functional directory structure that can start indexing on Google, focused on the core 30 restaurants to build initial trust.
+WEEK 1 - FOUNDATION & HOMEPAGE
+Goal: Get a live website online
+- Day 1: Clone repo + set up Next.js project in Antigravity
+- Day 2: Build Homepage (hero, search bar, category cards)
+- Day 3: Build Navbar + Footer
+- Day 4: Connect Vercel to GitHub (auto-deploy)
+- Day 5: Test on mobile, fix design issues
+END OF WEEK: denia.info is live with a homepage
 
-**Week 1:**
-- Scaffold Next.js project with Tailwind CSS setup.
-- Configure Supabase database schema (Profiles, Restaurants, Menus, Reviews).
-- Implement basic authentication.
-- Build the core landing page design and navigation structure.
+WEEK 2 - RESTAURANT PAGES
+Goal: Show real restaurants on the site
+- Day 1: Build Restaurant Listing page (grid of cards)
+- Day 2: Add filters (cuisine, price, area, open now)
+- Day 3: Build Restaurant Detail page (menu, photos, hours)
+- Day 4: Connect Supabase database
+- Day 5: Add 3 fake restaurants to test everything works
+END OF WEEK: Restaurants show up on the site from database
 
-**Week 2:**
-- Develop the "Restaurant Profile" page template (Photos, basic info, map location).
-- Implement the "Search & Filter" directory page (by cuisine, location, price).
-- Create basic SEO structure (meta tags, sitemap, robots.txt).
+WEEK 3 - BOOKING SYSTEM
+Goal: Tourists can book a table
+- Day 1: Build booking form (name, date, time, guests)
+- Day 2: Save bookings to Supabase
+- Day 3: Set up SendGrid email confirmations
+- Day 4: Test full booking flow start to finish
+- Day 5: Fix bugs, test on mobile
+END OF WEEK: Someone can book a table and get an email
 
-**Week 3:**
-- Build the CMS dashboard for admins to easily add/edit restaurant data.
-- Start manual data entry for the first 10-15 relationship-based restaurants.
-- Set up multilingual support infrastructure (routing/translations).
+WEEK 4 - CLAUDE AI CHATBOT
+Goal: Smart tourist assistant on the site
+- Day 1: Connect Claude API to the project
+- Day 2: Build chat widget on homepage
+- Day 3: Train chatbot with Denia restaurant data
+- Day 4: Add auto-translate for menus (ES/EN/FR/DE/NL)
+- Day 5: Test everything, final polish
+END OF WEEK: AI chatbot live, menus in 5 languages
 
-**Week 4:**
-- Testing and bug fixing.
-- "Soft Launch" to a small group of locals and the first onboarded restaurant owners to gather feedback.
-- Finalize initial English and Spanish content.
+WEEK 5 - GO TO MARKET
+Goal: Get first real restaurants signed up
+- Visit 10 restaurants in Denia personally
+- Offer free listing for 6 months
+- Add their real menus, photos, info to the site
+- Post in Denia Facebook groups
+- Contact Denia tourism office
+END OF WEEK: 10 real restaurants live on denia.info
 
-## Month 2: Sticking Features
-Goal: Give users and owners reasons to return beyond just information.
+MONTH 2-3 - GROWTH
+Goal: 30 restaurants, 500 visitors/month
+- Add Hotels section
+- Add Events calendar
+- Add user reviews system
+- Start Instagram & TikTok content
+- Push notifications for daily specials
+- Restaurant owner dashboard
 
-**Week 5:**
-- Implement "User Reviews & Ratings" system.
-- Build the "Favorite / Save for later" functionality for users.
+MONTH 4-6 - FIRST REVENUE
+Goal: First paying customers
+- Launch featured listings (pay to appear at top)
+- Premium dashboard with analytics
+- Booking commission system
+- Expand to Javea & Calpe
+- Target: 500-1000 EUR/month revenue
 
-**Week 6:**
-- Develop the "Owner Dashboard" allowing claimed restaurants to update their own basic details and menus.
-- Set up automated image optimization for fast loading.
+YEAR 2 - EXPANSION
+Goal: Full Costa Blanca
+- Mobile app iOS & Android
+- Expand to Calpe, Altea, Benidorm, Gandia
+- Delivery integration
+- Loyalty program for users
+- White-label for other Spanish towns
 
-**Week 7:**
-- Introduce the "Open Right Now" real-time status feature.
-- Begin publishing the first set of "Local Guides" (e.g., "Best Paella").
-
-**Week 8:**
-- Refine mobile responsiveness deeply based on analytics.
-- Setup newsletter collection forms and welcome sequence.
-
-## Month 3: Expanding the Moat
-Goal: Introduce features that competitors cannot match.
-
-**Week 9:**
-- Develop WhatsApp booking integration (click-to-chat pre-filled templates).
-- Roll out French, German, and Dutch translations.
-
-**Week 10:**
-- Build out the "Events & Happenings" section for weekend guides.
-- Implement advanced SEO optimizations based on initial Google Search Console data.
-
-**Week 11:**
-- Design and launch the "Ismael's Picks" featured section.
-- Partner with local tourism boards for initial backlinks.
-
-**Week 12:**
-- Full Public Launch push.
-- Begin the "Restaurant Owner Meetup" initiative.
-
-## Post-Launch V2+ Features (TBD)
-- Real-time table booking engine integration.
-- Dedicated mobile app for restaurant owners.
-- Tourist loyalty point system.
-- Monetization layer (Premium listings, ads).
+================================================================
+SUCCESS MILESTONES
+================================================================
+End of Week 1:  Website live on denia.info
+End of Week 4:  Full MVP with AI chatbot
+Month 3:        30 restaurants, 500 visitors
+Month 6:        First revenue 500 EUR+
+Month 12:       200 listings, profitable
+Year 2:         Full Costa Blanca expansion
+================================================================
+END OF ROADMAP
+================================================================
