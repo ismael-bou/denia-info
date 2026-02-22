@@ -1,0 +1,62 @@
+# denia.info - Project Vision & Specifications
+
+## The Vision
+To be the absolute undisputed #1 platform for discovering and booking restaurants, bars, hotels, and events in Denia. Evolving from a simple directory into an indispensable local tool that connects tourists and locals with authentic Denia experiences, while giving businesses a modern, effective way to reach their customers without the high fees of international conglomerates.
+
+## Core Tech Stack
+- **Frontend/Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS (for rapid, modern, responsive UI)
+- **Backend/Database/Auth:** Supabase (PostgreSQL)
+- **AI Integration:** Claude AI (for content generation, translation assistance, and data categorization)
+- **Hosting:** Vercel (recommended for Next.js)
+
+## High-Level Database Structure (Supabase)
+1.  **Users**
+    - `id` (uuid, primary key)
+    - `role` (enum: superadmin, owner, tourist, local)
+    - `email`, `created_at`
+2.  **Venues**
+    - `id`, `owner_id` (fk Users)
+    - `name`, `type` (restaurant, bar, hotel, event_space)
+    - `description_es`, `description_en` (etc)
+    - `address`, `lat`, `lng`
+    - `status` (active, pending, claimed)
+    - `is_premium` (boolean)
+3.  **Menus/Items**
+    - `id`, `venue_id` (fk Venues)
+    - `name`, `price`, `description`
+4.  **Reviews**
+    - `id`, `venue_id`, `user_id`
+    - `rating`, `comment`, `created_at`
+5.  **Guides/Articles**
+    - `id`, `title`, `content`, `author`, `published_date`
+
+## Key Pages Structure
+- `/` - Home (Hero search, curated lists "Best Paella", recent reviews)
+- `/search` - Main directory with extensive filters (cuisine, price, open now, features)
+- `/venue/[slug]` - Detailed profile (Photos, Menu, Map, Reviews, WhatsApp Booking CTA)
+- `/guides` - Insider articles and lists
+- `/guides/[slug]` - Individual guide page
+- `/dashboard/user` - Saved places, upcoming bookings
+- `/dashboard/owner` - Edit venue details, update menu, view basic analytics
+- `/admin` - Superadmin control panel for Ismael
+
+## Monetization Plan
+We prioritize building trust and a critical mass of users before heavy monetization.
+
+**Phase 1: Free (Months 1-6)**
+- 100% free for everyone to build the network effect and outpace competitors. Focus entirely on user acquisition and SEO supremacy.
+
+**Phase 2: Freemium Model (Months 6-12)**
+- Basic Listing: Free (Name, address, 1 photo).
+- "Premium Profile": Small monthly fee (€15-€30/mo) for multiple photos, full menu upload, highlighted "Open Now" status, and direct WhatsApp link.
+
+**Phase 3: Advanced Monetization (Year 1+)**
+- "Featured Placements": Sponsored top results in search (e.g., top result for "Best Tapas").
+- "Booking Commission": Only if a full booking engine is built (alternative to WhatsApp).
+- Direct advertising for local events/services on the homepage.
+
+## Success Metrics (KPIs)
+- **Month 3:** 30 claimed restaurant profiles, 500 monthly unique visitors.
+- **Month 6:** 100 total listings, top 3 Google ranking for "restaurants in denia" (ES/EN), 2,000 monthly unique visitors.
+- **Year 1:** 50 Premium paying profiles, #1 local resource, established community channels.

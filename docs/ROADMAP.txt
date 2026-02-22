@@ -1,0 +1,70 @@
+# denia.info - Master Roadmap Overview
+Target: Launch MVP before summer season (by mid-May).
+
+## Month 1: Foundation & The MVP (Current)
+Goal: A functional directory structure that can start indexing on Google, focused on the core 30 restaurants to build initial trust.
+
+**Week 1:**
+- Scaffold Next.js project with Tailwind CSS setup.
+- Configure Supabase database schema (Profiles, Restaurants, Menus, Reviews).
+- Implement basic authentication.
+- Build the core landing page design and navigation structure.
+
+**Week 2:**
+- Develop the "Restaurant Profile" page template (Photos, basic info, map location).
+- Implement the "Search & Filter" directory page (by cuisine, location, price).
+- Create basic SEO structure (meta tags, sitemap, robots.txt).
+
+**Week 3:**
+- Build the CMS dashboard for admins to easily add/edit restaurant data.
+- Start manual data entry for the first 10-15 relationship-based restaurants.
+- Set up multilingual support infrastructure (routing/translations).
+
+**Week 4:**
+- Testing and bug fixing.
+- "Soft Launch" to a small group of locals and the first onboarded restaurant owners to gather feedback.
+- Finalize initial English and Spanish content.
+
+## Month 2: Sticking Features
+Goal: Give users and owners reasons to return beyond just information.
+
+**Week 5:**
+- Implement "User Reviews & Ratings" system.
+- Build the "Favorite / Save for later" functionality for users.
+
+**Week 6:**
+- Develop the "Owner Dashboard" allowing claimed restaurants to update their own basic details and menus.
+- Set up automated image optimization for fast loading.
+
+**Week 7:**
+- Introduce the "Open Right Now" real-time status feature.
+- Begin publishing the first set of "Local Guides" (e.g., "Best Paella").
+
+**Week 8:**
+- Refine mobile responsiveness deeply based on analytics.
+- Setup newsletter collection forms and welcome sequence.
+
+## Month 3: Expanding the Moat
+Goal: Introduce features that competitors cannot match.
+
+**Week 9:**
+- Develop WhatsApp booking integration (click-to-chat pre-filled templates).
+- Roll out French, German, and Dutch translations.
+
+**Week 10:**
+- Build out the "Events & Happenings" section for weekend guides.
+- Implement advanced SEO optimizations based on initial Google Search Console data.
+
+**Week 11:**
+- Design and launch the "Ismael's Picks" featured section.
+- Partner with local tourism boards for initial backlinks.
+
+**Week 12:**
+- Full Public Launch push.
+- Begin the "Restaurant Owner Meetup" initiative.
+
+## Post-Launch V2+ Features (TBD)
+- Real-time table booking engine integration.
+- Dedicated mobile app for restaurant owners.
+- Tourist loyalty point system.
+- Monetization layer (Premium listings, ads).
